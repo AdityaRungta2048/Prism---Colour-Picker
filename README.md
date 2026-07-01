@@ -1,4 +1,7 @@
-# Prism - Colour Picker
+Prism — Precision Color Picker for Chrome
+Pick any pixel. Copy HEX, RGB, HSL, HSB & OKLCH instantly.
+
+Built for designers, developers & creators.
 
 A production-ready Chrome Extension (Manifest V3) for developers and designers. Picks any pixel, shows it in five formats simultaneously, checks WCAG contrast, builds palettes, and exports them — all locally, no network calls.
 
@@ -19,39 +22,6 @@ A production-ready Chrome Extension (Manifest V3) for developers and designers. 
 | **Keyboard shortcut** | `Alt+Shift+C` launches the eyedropper without opening the popup |
 | **100% local** | Zero network requests, zero analytics, zero data collection |
 
-## Local dev setup
-
-```bash
-# Install dependencies
-npm install
-
-# Generate icons (runs automatically as part of build)
-npm run icons
-
-# Start Vite dev server (hot-reload; load from dist/ in Chrome)
-npm run dev
-
-# Production build → dist/
-npm run build
-
-# Run color-math self-tests (no browser needed)
-node scripts/test-color-utils.mjs
-
-# Create prism-colour-picker.zip for Web Store submission
-npm run zip
-```
-
-## Loading unpacked in Chrome
-
-1. Run `npm run build` — this produces the `dist/` folder.
-2. Open Chrome and navigate to `chrome://extensions`.
-3. Enable **Developer mode** (top-right toggle).
-4. Click **Load unpacked** and select the `dist/` folder.
-5. The Prism - Colour Picker icon appears in your toolbar.
-
-> **Tip:** Chrome hot-reload doesn't work for extensions. After `npm run dev` rebuilds,
-> click the ↺ refresh button on the extension card in `chrome://extensions`.
-
 ## How to use
 
 | Action | Gesture |
@@ -64,18 +34,6 @@ npm run zip
 | Start a palette session | **Palette** tab → **+ New Palette Session** |
 | Export palette | Session → CSS / SCSS / Tailwind / JSON / PNG |
 | Toggle color-blind view | **Vision** bar below the color swatch |
-
-## Chrome Web Store submission checklist
-
-### Before submitting
-
-- [ ] **Icons** — Replace `public/icons/` PNGs with polished artwork in 16 / 32 / 48 / 128 px sizes. The build-time icons are functional placeholders.
-- [ ] **Screenshots** — Chrome Web Store requires at least 1 screenshot (1280×800 or 640×400). Capture the popup with a color picked, contrast checker visible, and palette session active.
-- [ ] **Promotional images** — Optional but recommended: 440×280 small tile, 920×680 large tile, 1400×560 marquee.
-- [ ] **Store listing copy** — See the draft below.
-- [ ] **Privacy policy** — See the policy text below (host it as a public URL before submitting).
-- [ ] **Category** — "Developer Tools" or "Productivity".
-- [ ] **Permissions justification** — The store review form asks why each permission is needed; see answers below.
 
 ### Store listing draft
 
@@ -135,48 +93,10 @@ Prism - Colour Picker ("the extension") is a browser tool for picking and analyz
 - `downloads` — used when you export a palette as a PNG image.
 - `<all_urls>` (host permission) — required so the eyedropper content script can run on any page you visit.
 
-**Contact:** [your email here]
+**Contact:** adityarungta2048@gmail.com
 
 Last updated: 2026-07-01
 
----
-
-### Permissions justification (for review form)
-
-| Permission | Reason |
-|---|---|
-| `storage` | Persist color history, palette sessions, and user settings (pinned background, CB mode) locally — no external server. |
-| `activeTab` | Capture a screenshot of the active tab to power the custom eyedropper with magnifier loupe. |
-| `clipboardWrite` | Let the user copy a color format (HEX, RGB, etc.) by clicking a chip. |
-| `scripting` | Inject the eyedropper overlay content script into the active tab on demand. |
-| `downloads` | Save palette PNG exports to the user's Downloads folder. |
-| `<all_urls>` | The eyedropper content script must be able to run on any page the user is browsing. |
-
-## Project structure
-
-```
-src/
-  background/index.ts        Service worker — routes messages, captures screenshots
-  content/index.ts           Content script — custom canvas eyedropper with magnifier loupe
-  popup/
-    index.html               Popup entry HTML
-    main.tsx                 Preact root mount
-    App.tsx                  Main app component (state management)
-    popup.css                Full design system (dark mode, CSS custom properties)
-    components/
-      ColorDisplay.tsx       Large swatch + 5 format chips + named/Tailwind match
-      ContrastChecker.tsx    WCAG AA/AAA badges vs white, black, custom
-      PaletteSession.tsx     Session recording + multi-format export
-      ColorHistory.tsx       Searchable, taggable history list
-      ColorBlindnessPreview.tsx  Vision mode toggle bar
-      Onboarding.tsx         First-install modal
-  lib/
-    color-utils.ts           All color math: conversions, OKLCH, Lab ΔE, contrast, CB simulation, nearest named/Tailwind
-    storage.ts               Typed chrome.storage.local wrapper
-  types.ts                   Shared TypeScript types
-public/icons/                PNG icons (16/32/48/128 px)
-scripts/
-  generate-icons.mjs         Pure-Node PNG icon generator (no native deps)
   test-color-utils.mjs       Color math self-tests (node scripts/test-color-utils.mjs)
   zip-dist.mjs               Creates prism-colour-picker.zip from dist/
 ```
