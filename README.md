@@ -1,4 +1,3 @@
-## Prism — Precision Color Picker for Chrome
 # Pick any pixel. Copy HEX, RGB, HSL, HSB & OKLCH instantly.
 
 # Built for designers, developers & creators.
