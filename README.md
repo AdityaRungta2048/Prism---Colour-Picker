@@ -1,7 +1,7 @@
-Prism — Precision Color Picker for Chrome
-Pick any pixel. Copy HEX, RGB, HSL, HSB & OKLCH instantly.
+## Prism — Precision Color Picker for Chrome
+# Pick any pixel. Copy HEX, RGB, HSL, HSB & OKLCH instantly.
 
-Built for designers, developers & creators.
+# Built for designers, developers & creators.
 
 A production-ready Chrome Extension (Manifest V3) for developers and designers. Picks any pixel, shows it in five formats simultaneously, checks WCAG contrast, builds palettes, and exports them — all locally, no network calls.
 
