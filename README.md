@@ -93,9 +93,3 @@ Prism - Colour Picker ("the extension") is a browser tool for picking and analyz
 - `<all_urls>` (host permission) — required so the eyedropper content script can run on any page you visit.
 
 **Contact:** adityarungta2048@gmail.com
-
-Last updated: 2026-07-01
-
-  test-color-utils.mjs       Color math self-tests (node scripts/test-color-utils.mjs)
-  zip-dist.mjs               Creates prism-colour-picker.zip from dist/
-```
