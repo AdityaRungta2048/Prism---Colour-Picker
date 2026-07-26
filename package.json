@@ -1,0 +1,23 @@
+{
+  "name": "prism-colour-picker",
+  "version": "1.0.0",
+  "description": "Advanced color picker Chrome extension",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "node scripts/generate-icons.mjs && tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "icons": "node scripts/generate-icons.mjs",
+    "zip": "node scripts/zip-dist.mjs",
+    "test": "node scripts/test-color-utils.mjs"
+  },
+  "devDependencies": {
+    "@crxjs/vite-plugin": "^2.0.0-beta.26",
+    "@preact/preset-vite": "^2.8.1",
+    "@types/chrome": "^0.0.268",
+    "preact": "^10.22.0",
+    "typescript": "^5.4.5",
+    "vite": "^5.2.11"
+  }
+}

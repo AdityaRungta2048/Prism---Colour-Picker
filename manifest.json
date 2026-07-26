@@ -1,0 +1,53 @@
+{
+  "manifest_version": 3,
+  "name": "Prism - Colour Picker",
+  "version": "1.0.0",
+  "description": "Advanced color picker: multi-format output, WCAG contrast, palette sessions, and magnifier loupe. 100% local, no data collection.",
+  "action": {
+    "default_popup": "src/popup/index.html",
+    "default_title": "Prism - Colour Picker",
+    "default_icon": {
+      "16": "public/icons/icon16.png",
+      "32": "public/icons/icon32.png",
+      "48": "public/icons/icon48.png",
+      "128": "public/icons/icon128.png"
+    }
+  },
+  "icons": {
+    "16": "public/icons/icon16.png",
+    "32": "public/icons/icon32.png",
+    "48": "public/icons/icon48.png",
+    "128": "public/icons/icon128.png"
+  },
+  "background": {
+    "service_worker": "src/background/index.ts",
+    "type": "module"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["src/content/index.ts"],
+      "run_at": "document_idle",
+      "all_frames": false
+    }
+  ],
+  "permissions": [
+    "storage",
+    "clipboardWrite",
+    "activeTab",
+    "scripting",
+    "downloads"
+  ],
+  "commands": {
+    "activate-eyedropper": {
+      "suggested_key": {
+        "default": "Alt+Shift+C",
+        "mac": "Alt+Shift+C"
+      },
+      "description": "Activate Prism - Colour Picker eyedropper"
+    }
+  },
+  "host_permissions": [
+    "<all_urls>"
+  ]
+}
