@@ -2,6 +2,8 @@
 
 A production-ready Chrome Extension (Manifest V3) for developers and designers. Picks any pixel, shows it in five formats simultaneously, checks WCAG contrast, builds palettes, and exports them — all locally, no network calls.
 
+**[⬇️ Add to Chrome](https://chromewebstore.google.com/detail/fnolbffnpeamdpjepbgmlajdeakfecfb)** · **[🌐 Website](https://adityarungta2048.github.io/Prism---Colour-Picker/)**
+
 ## Features
 
 | Feature | Details |
