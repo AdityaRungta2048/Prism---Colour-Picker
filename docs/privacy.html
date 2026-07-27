@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Privacy Policy — Prism Colour Picker</title>
+    <meta name="description" content="Prism Colour Picker privacy policy. Prism is 100% local: it collects no data, makes zero network requests, and stores everything in your browser." />
+    <style>
+      :root {
+        --bg: #ffffff; --bg-alt: #f6f5ff; --card: #ffffff; --text: #171326;
+        --muted: #6b6684; --border: #ece9f6; --accent: #7c6ef4; --accent-2: #a855f7;
+        --shadow-sm: 0 8px 22px rgba(23, 19, 38, 0.10);
+        --font: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        --mono: ui-monospace, 'SF Mono', Menlo, monospace;
+      }
+      @media (prefers-color-scheme: dark) {
+        :root { --bg: #0b0b10; --bg-alt: #101019; --card: #14141f; --text: #ecebf6;
+          --muted: #9d9ab8; --border: #23232f; --accent: #9580ff; --accent-2: #c084fc;
+          --shadow-sm: 0 8px 24px rgba(0,0,0,0.45); }
+      }
+      * { box-sizing: border-box; margin: 0; padding: 0; }
+      html { scroll-behavior: smooth; }
+      body { font-family: var(--font); color: var(--text); background: var(--bg); line-height: 1.65; -webkit-font-smoothing: antialiased; }
+      a { color: var(--accent); text-decoration: none; }
+      a:hover { text-decoration: underline; }
+      .wrap { width: 100%; max-width: 760px; margin: 0 auto; padding: 0 24px; }
+      header.nav { position: sticky; top: 0; z-index: 20; background: color-mix(in srgb, var(--bg) 86%, transparent); backdrop-filter: saturate(150%) blur(12px); border-bottom: 1px solid var(--border); }
+      .nav-inner { display: flex; align-items: center; justify-content: space-between; height: 66px; max-width: 1120px; margin: 0 auto; padding: 0 24px; }
+      .brand { display: flex; align-items: center; gap: 10px; font-weight: 800; font-size: 18px; letter-spacing: -0.3px; color: var(--text); }
+      .brand img { width: 30px; height: 30px; border-radius: 9px; box-shadow: var(--shadow-sm); }
+      .back { font-size: 15px; color: var(--muted); font-weight: 500; }
+      .back:hover { color: var(--text); text-decoration: none; }
+      .doc { padding: 56px 0 80px; }
+      .eyebrow { display: inline-flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 700; color: var(--accent); letter-spacing: 0.3px; margin-bottom: 14px; }
+      h1 { font-size: clamp(30px, 5vw, 42px); letter-spacing: -0.8px; font-weight: 850; line-height: 1.1; }
+      .updated { color: var(--muted); font-size: 14px; margin-top: 12px; }
+      .lead { margin-top: 22px; font-size: 18px; color: var(--muted); }
+      h2 { font-size: 20px; letter-spacing: -0.3px; font-weight: 780; margin: 36px 0 10px; }
+      p { margin: 10px 0; color: var(--text); }
+      .muted { color: var(--muted); }
+      .highlight { background: linear-gradient(135deg, color-mix(in srgb, var(--accent) 12%, transparent), color-mix(in srgb, var(--accent-2) 8%, transparent)); border: 1px solid color-mix(in srgb, var(--accent) 24%, transparent); border-radius: 14px; padding: 20px 22px; margin: 26px 0; }
+      .highlight strong { color: var(--accent); }
+      table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 15px; }
+      th, td { text-align: left; padding: 11px 12px; border-bottom: 1px solid var(--border); vertical-align: top; }
+      th { color: var(--muted); font-size: 12px; text-transform: uppercase; letter-spacing: 0.06em; font-weight: 700; }
+      td code { font-family: var(--mono); font-size: 13px; color: var(--accent); background: var(--bg-alt); padding: 2px 6px; border-radius: 5px; white-space: nowrap; }
+      footer { border-top: 1px solid var(--border); padding: 32px 0; color: var(--muted); font-size: 14px; }
+      .foot-inner { max-width: 760px; margin: 0 auto; padding: 0 24px; display: flex; flex-wrap: wrap; gap: 12px; justify-content: space-between; align-items: center; }
+      .foot-inner a { color: var(--muted); }
+      .foot-inner a:hover { color: var(--accent); text-decoration: none; }
+    </style>
+  </head>
+  <body>
+    <header class="nav">
+      <div class="nav-inner">
+        <a class="brand" href="index.html"><img src="img/icon.png" alt="Prism icon" />Prism</a>
+        <a class="back" href="index.html">← Back to home</a>
+      </div>
+    </header>
+
+    <main class="doc">
+      <div class="wrap">
+        <span class="eyebrow">Privacy Policy</span>
+        <h1>Prism keeps your colours to yourself.</h1>
+        <p class="updated">Last updated: 1 July 2026</p>
+        <p class="lead">
+          Prism — Colour Picker ("the extension") is a browser tool for picking and analysing colours.
+          This policy explains, in plain terms, exactly what it does and does not do with your data.
+        </p>
+
+        <div class="highlight">
+          <strong>The short version:</strong> Prism collects nothing, sends nothing, and stores everything
+          locally on your device. There is no server to receive your data because there is no server at all.
+        </div>
+
+        <h2>Data collection</h2>
+        <p>
+          Prism does not collect, transmit, or share any personal data, browsing data, or usage analytics.
+          All colour history, palette sessions, and settings are stored exclusively in your browser's local
+          storage (<code>chrome.storage.local</code>) and never leave your device.
+        </p>
+
+        <h2>Network requests</h2>
+        <p>
+          Prism makes zero outbound network requests. It has no backend server, no telemetry, and no
+          third-party integrations.
+        </p>
+
+        <h2>Screenshots</h2>
+        <p>
+          Prism temporarily captures a screenshot of the currently visible tab when you activate the
+          eyedropper. This screenshot is used only within the extension to render the magnifier loupe and
+          sample pixel colours. It is never stored or transmitted.
+        </p>
+
+        <h2>Permissions</h2>
+        <table>
+          <thead><tr><th>Permission</th><th>Why it's needed</th></tr></thead>
+          <tbody>
+            <tr><td><code>storage</code></td><td>Saves your colour history, palette sessions, and settings locally.</td></tr>
+            <tr><td><code>activeTab</code></td><td>Required to capture a screenshot of the tab you are picking from.</td></tr>
+            <tr><td><code>clipboardWrite</code></td><td>Allows copying colour codes when you click a format chip.</td></tr>
+            <tr><td><code>scripting</code></td><td>Injects the eyedropper overlay into the active tab.</td></tr>
+            <tr><td><code>downloads</code></td><td>Used when you export a palette as a PNG image.</td></tr>
+            <tr><td><code>&lt;all_urls&gt;</code></td><td>Host permission — required so the eyedropper content script can run on any page you visit.</td></tr>
+          </tbody>
+        </table>
+
+        <h2>Contact</h2>
+        <p class="muted">
+          Questions about this policy? Email
+          <a href="mailto:adityarungta2048@gmail.com">adityarungta2048@gmail.com</a>.
+        </p>
+      </div>
+    </main>
+
+    <footer>
+      <div class="foot-inner">
+        <span>© 2026 Prism — Colour Picker</span>
+        <span><a href="index.html">Home</a> · <a href="https://github.com/AdityaRungta2048/Prism---Colour-Picker">GitHub</a> · <a href="mailto:adityarungta2048@gmail.com">Contact</a></span>
+      </div>
+    </footer>
+  </body>
+</html>
